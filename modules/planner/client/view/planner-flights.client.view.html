@@ -1,0 +1,56 @@
+<section data-ng-controller="PlannerController">
+  <div class="row flights-row">
+
+    <div class='col-lg-6'>
+      <div class='jumbotron flights-jumbo'>
+        <h1 style="font-size: 120px; color:white;">Flights</h1>
+        <h2 style="color:white">Budget: $amount</h2>
+        <h3 style="color:white">Total Cost: $cost</h3>
+      </div>
+    </div>
+
+    <div class='col-lg-6'>
+      <div class='jumbotron flights-map'>
+        <img src='client/img/us-flight-search.png'>
+      </div>
+    </div>
+
+  </div>
+    <div class='row'>
+
+      <div class="col-md-12 add-flight-panel" ng-click="isCollapsed=!isCollapsed">
+        <h3><span class="glyphicon glyphicon-plus"></span>  Add flight</h3>
+      </div>
+
+      <div class="col-md-12 flight-description-panel" collapse="isCollapsed">
+        <form action='#'>
+          <h1>Description</h1><h6>Please fill out all boxes</h6>
+
+          <div class='row'>
+
+            <div class="col-lg-6">
+              Departure: <br />
+              <input type='text' name='departure' placeholder='Location'><br />
+              One Way/ Round Trip: <br />
+              <input type='radio' name='flight-type' value="One way"> One way
+              <input type='radio' name='flight-type' value="Round trip"> Round trip <br /><br />
+              Additional Notes: (max character count: 250)<br />
+              <textarea id='flight-notes'type='text'name='additional-notes'
+              placeholder='Enter Additional Notes Here'maxlength="250"></textarea>
+              <input type="submit" value="Save">
+            </div>
+
+            <div class="col-lg-6">
+              Arrival: <br />
+              <input type='text' name='arrival' placeholder='Location'>
+
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <div class="col-md-12 flight-description-panel">
+        <h2> &nbsp&nbsp&nbspFlights:</h2>
+      </div>
+    </div>
+</section>

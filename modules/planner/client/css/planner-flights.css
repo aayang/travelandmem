@@ -1,0 +1,47 @@
+.flights-row {
+  height: 450px;
+  padding-top:
+}
+
+.jumbotron.flights-jumbo {
+  background-image: url('../img/flights_background.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 400px;
+  padding-bottom: 20px;
+  margin-bottom: 0px;
+}
+
+#map {
+  width: auto;
+  height: 400px;
+}
+
+.add-flight-panel {
+  border-style: solid;
+  border-color: black;
+  padding:0px 20px;
+  background-color: #f5f5f5;
+  border-radius: 20px;
+}
+
+.flight-description-panel {
+  border-style: solid;
+  border-color: black;
+  background-color: #f5f5f5;
+  border-radius: 20px;
+  padding-bottom: 10px;
+}
+
+.add-flight-panel h3{
+  margin-top: 10px;
+}
+
+#flight-notes {
+  height:120px;
+  width:500px;
+  resize: none;
+  overflow: auto;
+  margin: 1px;
+  padding: 1px;
+}

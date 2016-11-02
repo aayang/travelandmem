@@ -1,0 +1,49 @@
+<section data-ng-controller="PlannerController">
+
+  <div class="container row">
+
+    <div class="col-md-12 grey-border">
+      <h1>City Name 1</h1>
+      <p>Arrival Date to Departure date</p>
+      <p>Budget: $$$</p>
+    </div>
+    <div class="container row event-container">
+
+      <div class="col-md-7 grey-border" id="city-events">
+        <div ng-click="isCollapsed = !isCollapsed">
+          <h3>Event 1</h2>
+        </div>
+
+        <div collapse="isCollapsed">
+          <p>event details</p>
+        </div>
+      </div>
+
+      <div class="col-md-5" id="city-event-map">
+        <h1>MAP</h1>
+      </div>
+    </div>
+
+    <div class="col-md-12 grey-border">
+      <h1>City Name 2</h1>
+      <p>Arrival Date to Departure date</p>
+      <p>Budget: $$$</p>
+    </div>
+
+    <div class="col-md-7 grey-border" id="city-events">
+      <div ng-click="isCollapsed = !isCollapsed">
+        <h3>Event 1</h2>
+      </div>
+
+      <div collapse="isCollapsed">
+        <p>event details</p>
+      </div>
+
+    </div>
+
+    <div class="col-md-5" id="city-event-map">
+      <h1>MAP</h1>
+    </div>
+
+  </div>
+</section>
