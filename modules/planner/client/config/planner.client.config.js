@@ -14,8 +14,8 @@ angular.module('planner').run(['Menus',
 
         // Add the articles dropdown item
         Menus.addMenuItem('topbar', {
-            title: 'Extra',
-            state: 'planner.extra'
+            title: 'My Plans',
+            state: 'planner.myplans'
         });
 
         Menus.addMenuItem('topbar', {
