@@ -1,17 +1,17 @@
 <section data-ng-controller="PlannerController">
   <div class="row flights-row">
 
-    <div class='col-lg-6'>
-      <div class='jumbotron flights-jumbo'>
-        <h1 style="font-size: 120px; color:white;">Flights</h1>
-        <h2 style="color:white">Budget: $amount</h2>
-        <h3 style="color:white">Total Cost: $cost</h3>
-      </div>
+    <div class='col-lg-6 jumbotron flights-jumbo'>
+      <h1 style="font-size: 120px; color:white;">Flights</h1>
+      <h2 style="color:white">Budget: $amount</h2>
+      <h3 style="color:white">Total Cost: $cost</h3>
     </div>
 
-    <div class='col-lg-6'>
-      <div class='jumbotron flights-map'>
-        <img src='client/img/us-flight-search.png'>
+    <div class='col-lg-6 map-container'>
+      <div id='flights-map'>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d13057301.414609684!2d-104.05317432414408!3d36.966409810248!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e4!4m5!1s0x80c2b0d213b24fb5%3A0x77a87b57698badf1!2slax!3m2!1d33.9415889!2d-118.40853!4m5!1s0x89c26650d5404947%3A0xec4fb213489f11f0!2sjfk+airport!3m2!1d40.641311099999996!2d-73.77813909999999!5e0!3m2!1sen!2sus!4v1478159315974"
+         frameborder="0" style="border:0" allowfullscreen>
+        </iframe>
       </div>
     </div>
 

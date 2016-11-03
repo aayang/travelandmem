@@ -27,5 +27,10 @@ angular.module('planner').run(['Menus',
             title: 'Events',
             state: 'planner.events'
         });
+
+        Menus.addMenuItem('topbar', {
+            title: 'Hotels',
+            state: 'planner.hotels'
+        })
     }
 ]);

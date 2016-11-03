@@ -1,15 +1,27 @@
 .flights-row {
   height: 450px;
-  padding-top:
 }
 
+.map-container {
+  height:inherit;
+}
+
+.map-container #flights-map{
+  height:inherit;
+  width: 100%;
+  margin-bottom: 10px;
+}
+#flights-map iframe{
+  height:inherit;;
+  width: inherit;
+}
 .jumbotron.flights-jumbo {
   background-image: url('../img/flights_background.jpg');
   background-size: cover;
   background-repeat: no-repeat;
-  height: 400px;
-  padding-bottom: 20px;
-  margin-bottom: 0px;
+  height: inherit;;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 #map {

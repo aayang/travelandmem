@@ -30,6 +30,11 @@ angular.module('planner').config(['$stateProvider',
                 templateUrl: 'modules/planner/view/planner-flights.client.view.html'
             })
 
+            .state('planner.hotels', {
+                url: '/hotels',
+                templateUrl: 'modules/planner/view/planner-hotels.client.view.html'
+            })
+
             .state('planner.events', {
                 url: '/events',
                 templateUrl: 'modules/planner/view/planner-events.client.view.html'

@@ -1,13 +1,17 @@
 .event-container{
-  height: 400px;
+  height: 420px;
 }
 
-#city-event-map{
-  background-color: #f3f3f3;
-  height: inherit;
+.event-container #city-event-map{
+  height: 73.81%;
 }
 
-#city-events {
+#city-event-map iframe{
+  width: 100%;
+  height: 100%;
+}
+
+.event-container #city-event{
   overflow: auto;
   height: inherit;
 }

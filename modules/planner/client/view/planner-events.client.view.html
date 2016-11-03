@@ -1,15 +1,41 @@
 <section data-ng-controller="PlannerController">
 
-  <div class="container row">
+    <div class="container row">
 
-    <div class="col-md-12 grey-border">
-      <h1>City Name 1</h1>
-      <p>Arrival Date to Departure date</p>
-      <p>Budget: $$$</p>
-    </div>
-    <div class="container row event-container">
+      <div class="col-md-12 grey-border">
+        <!--<h1>{{city.city_name}}</h1>-->
 
-      <div class="col-md-7 grey-border" id="city-events">
+        <h1>{{cityEvents.name}}</h1>
+        <p>Arrival Date to Departure date</p>
+        <p>Budget: $$$</p>
+      </div>
+      <div class="container row event-container">
+
+        <div class="col-md-8 grey-border" id="city-events">
+          <div ng-click="isCollapsed = !isCollapsed">
+            <h3>Event 1</h2>
+          </div>
+
+          <div collapse="isCollapsed">
+            <p>event details</p>
+          </div>
+
+        </div>
+
+        <div class="col-md-4 container-map" id="city-event-map">
+          <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1XzA0LRy1AclR0wxqsEVoxmOTEkI"
+          frameborder="0" style="border:0">
+          </iframe>
+        </div>
+      </div>
+
+      <div class="col-md-12 grey-border">
+        <h1>City Name 2</h1>
+        <p>Arrival Date to Departure date</p>
+        <p>Budget: $$$</p>
+      </div>
+      <div class="container row event-container">
+      <div class="col-md-8 grey-border" id="city-events">
         <div ng-click="isCollapsed = !isCollapsed">
           <h3>Event 1</h2>
         </div>
@@ -17,33 +43,13 @@
         <div collapse="isCollapsed">
           <p>event details</p>
         </div>
-      </div>
 
-      <div class="col-md-5" id="city-event-map">
-        <h1>MAP</h1>
+      </div>
+      <div class="col-md-4 container-map" id="city-event-map">
+        <iframe src="https://www.google.com/maps/d/u/0/embed?mid=12jJzKFPoJ94GyjKtHjT9vMEpYqs"
+        frameborder="0" style="border:0">
+        </iframe>
+      </div>
       </div>
     </div>
-
-    <div class="col-md-12 grey-border">
-      <h1>City Name 2</h1>
-      <p>Arrival Date to Departure date</p>
-      <p>Budget: $$$</p>
-    </div>
-
-    <div class="col-md-7 grey-border" id="city-events">
-      <div ng-click="isCollapsed = !isCollapsed">
-        <h3>Event 1</h2>
-      </div>
-
-      <div collapse="isCollapsed">
-        <p>event details</p>
-      </div>
-
-    </div>
-
-    <div class="col-md-5" id="city-event-map">
-      <h1>MAP</h1>
-    </div>
-
-  </div>
 </section>
