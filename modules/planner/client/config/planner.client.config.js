@@ -13,24 +13,24 @@ angular.module('planner').run(['Menus',
         });
 
         // Add the articles dropdown item
-        Menus.addMenuItem('topbar', {
-            title: 'My Plans',
-            state: 'planner.myplans'
-        });
+        // Menus.addMenuItem('topbar', {
+        //     title: 'My Plans',
+        //     state: 'planner.myplans'
+        // });
 
-        Menus.addMenuItem('topbar', {
-            title: 'Flights',
-            state: 'planner.flights'
-        });
+        // Menus.addMenuItem('topbar', {
+        //     title: 'Flights',
+        //     state: 'planner.flights'
+        // });
 
-        Menus.addMenuItem('topbar', {
-            title: 'Events',
-            state: 'planner.events'
-        });
+        // Menus.addMenuItem('topbar', {
+        //     title: 'Events',
+        //     state: 'planner.events'
+        // });
 
-        Menus.addMenuItem('topbar', {
-            title: 'Hotels',
-            state: 'planner.hotels'
-        })
+        // Menus.addMenuItem('topbar', {
+        //     title: 'Hotels',
+        //     state: 'planner.hotels'
+        // })
     }
 ]);

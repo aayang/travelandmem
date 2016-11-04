@@ -1,70 +1,86 @@
 {
-  "name": "Jason",
-	"cities": [{
-		"city_name": "Los Angeles",
-		"arrival_date": 1420350700000,
-		"departure_date": 1420390800000,
-		"budget": 3000,
-		"events": [{
-			"event_name": "Go to LACMA",
-			"scheduled_time": 1420350700000,
-			"cost": 25,
-			"event_coordinates": [{
-				"coordinate_x": 13.31341,
-				"coordinate_y": 23.34123
-			}],
-			"additional_notes": "Meet Aaron there and probably grab some food"
-		}, {
-			"event_name": "Shop around Hollywood",
-			"scheduled_time": 1420450700000,
-			"cost": 150,
-			"event_coordinates": [{
-				"coordinate_x": 15.31341,
-				"coordinate_y": 24.34123
-			}],
-			"additional_notes": "Must go to all the designer stores"
-		}, {
-			"event_name": "Check out the gills at Venice",
-			"scheduled_time": 1420650700000,
-			"cost": 5,
-			"event_coordinates": [{
-				"coordinate_x": 11.31341,
-				"coordinate_y": 16.34123
-			}],
-			"additional_notes": "Bring suntan lotion, beach towels, and muscles"
-		}]
-	}, {
-		"city_name": "Seattle",
-		"arrival_date": 1420690800000,
-		"departure_date": 1420890800000,
-		"budget": 2500,
-		"events": [{
-			"event_name": "Bungee jump off the Space Needle",
-			"scheduled_time": 1420690900000,
-			"cost": 25,
-			"event_coordinates": [{
-				"coordinate_x": 15.31341,
-				"coordinate_y": 39.34123
-			}],
-			"additional_notes": "force Yahav to jump, if he doesn't push him"
-		}, {
-			"event_name": "Go to all the Starbucks around Seattle",
-			"scheduled_time": 1420691100000,
-			"cost": 777,
-			"event_coordinates": [{
-				"coordinate_x": 17.31341,
-				"coordinate_y": 42.34123
-			}],
-			"additional_notes": "Drink just coffee for the day, no water"
-		}, {
-			"event_name": "Attend Logic's concert",
-			"scheduled_time": 1420691400000,
-			"cost": 70,
-			"event_coordinates": [{
-				"coordinate_x": 15.31341,
-				"coordinate_y": 44.34123
-			}],
-			"additional_notes": "fuego fuego"
-		}]
-	}]
+	"name": "Jason",
+	"cities": {
+		"first_city": {
+			"city_name": "Los Angeles",
+			"arrival_date": 1420350700000,
+			"departure_date": 1420390800000,
+			"budget": 3000,
+			"events": {
+				"first_event": {
+					"event_name": "Go to LACMA",
+					"scheduled_time": 1420350700000,
+					"cost": 25,
+					"event_coordinates": {
+						"coordinate_x": 13.31341,
+						"coordinate_y": 23.34123
+					},
+					"additional_notes": "Meet Aaron there and probably grab some food"
+				},
+
+				"second_event" : {
+					"event_name": "Shop around Hollywood",
+					"scheduled_time": 1420450700000,
+					"cost": 150,
+					"event_coordinates": {
+						"coordinate_x": 15.31341,
+						"coordinate_y": 24.34123
+					},
+					"additional_notes": "Must go to all the designer stores"
+				}, 
+
+				"third_event" : {
+					"event_name": "Check out the gills at Venice",
+					"scheduled_time": 1420650700000,
+					"cost": 5,
+					"event_coordinates": {
+						"coordinate_x": 11.31341,
+						"coordinate_y": 16.34123
+					},
+					"additional_notes": "Bring suntan lotion, beach towels, and muscles"
+				}
+			}
+		},
+
+	 	"second_city": {
+			"city_name": "Seattle",
+			"arrival_date": 1420690800000,
+			"departure_date": 1420890800000,
+			"budget": 2500,
+			"events": {
+				"first_event": {
+					"event_name": "Bungee jump off the Space Needle",
+					"scheduled_time": 1420690900000,
+					"cost": 25,
+					"event_coordinates": {
+						"coordinate_x": 15.31341,
+						"coordinate_y": 39.34123
+					},
+					"additional_notes": "force Yahav to jump, if he doesn't push him"
+				}, 
+
+				"second_event" : {
+					"event_name": "Go to all the Starbucks around Seattle",
+					"scheduled_time": 1420691100000,
+					"cost": 777,
+					"event_coordinates": {
+						"coordinate_x": 17.31341,
+						"coordinate_y": 42.34123
+					},
+					"additional_notes": "Drink just coffee for the day, no water"
+				}, 
+
+				"third_event":{
+					"event_name": "Attend Logic's concert",
+					"scheduled_time": 1420691400000,
+					"cost": 70,
+					"event_coordinates": {
+						"coordinate_x": 15.31341,
+						"coordinate_y": 44.34123
+					},
+					"additional_notes": "fuego fuego"
+				}
+			}
+		}
+	}
 }

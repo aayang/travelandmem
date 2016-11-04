@@ -28,6 +28,26 @@ angular.module('articles').config(['$stateProvider',
       .state('articles.edit', {
         url: '/:articleId/edit',
         templateUrl: 'modules/articles/views/edit-article.client.view.html'
+      })
+
+      .state('articles.hotels', {
+        url: '/create/hotels',
+        templateUrl: 'modules/articles/views/create-hotel.client.view.html'
+      })
+
+      .state('articles.rentals', {
+        url: '/create/rentals',
+        templateUrl: 'modules/articles/views/create-rental.client.view.html'
+      })
+
+      .state('articles.other', {
+        url: '/create/other',
+        templateUrl: 'modules/articles/views/create-other.client.view.html'
+      })
+
+      .state('articles.flights', {
+        url: '/create/flights',
+        templateUrl: 'modules/articles/views/create-flight.client.view.html'
       });
   }
 ]);

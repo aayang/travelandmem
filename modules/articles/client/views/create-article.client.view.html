@@ -1,29 +1,38 @@
-<section data-ng-controller="ArticlesController">
-  <div class="page-header">
-    <h1>New Article</h1>
-  </div>
-  <div class="col-md-12">
-    <form name="articleForm" class="form-horizontal" data-ng-submit="create()" novalidate>
-      <fieldset>
-        <div class="form-group">
-          <label class="control-label" for="title">Title</label>
-          <div class="controls">
-            <input name="title" type="text" data-ng-model="title" id="title" class="form-control" placeholder="Title">
-          </div>
-        </div>
-        <div class="form-group">
-          <label class="control-label" for="content">Content</label>
-          <div class="controls">
-            <textarea name="content" data-ng-model="content" id="content" class="form-control" cols="30" rows="10" placeholder="Content"></textarea>
-          </div>
-        </div>
-        <div class="form-group">
-          <input type="submit" class="btn btn-default">
-        </div>
-        <div data-ng-show="error" class="text-danger">
-          <strong data-ng-bind="error"></strong>
-        </div>
-      </fieldset>
-    </form>
-  </div>
-</section>
+<div style="background-color: blue; width: 100%; margin: 0 auto; min-height: 100%;">
+<div class="row marketing tile-container">
+
+   <div class="col-md-3 shift-left">
+      <a ui-sref="articles.flights" class="activity-tile shift-right-down" id="flights-tile">
+         <h1 class="vertical-center">+ New Flight</h1>
+      </a>
+   </div>
+
+   <div class="col-md-3 shift-right">
+      <a ui-sref="articles.hotels" class="activity-tile shift-right-down" id="hotels-tile">
+         <h1 class="vertical-center">+ New Hotel</h1>
+      </a>
+   </div>
+
+</div>
+<div class="row marketing tile-container">
+   <div class="col-md-3 shift-event-right">
+      <a ui-sref="planner.events" class="activity-tile" id="events-tile">
+         <h1 class="vertical-center">+ New Event</h1>
+      </a>
+   </div>
+</div>
+
+<div class="row marketing tile-container">
+   <div class="col-md-3 shift-left">
+      <a ui-sref="articles.rentals" class="activity-tile shift-right-down" id="rentals-tile">
+         <h1 class="vertical-center">+ New Rental</h1>
+      </a>
+   </div>
+
+   <div class="col-md-3 shift-right">
+      <a ui-sref="articles.other" class="activity-tile shift-right-down" id="other-tile">
+         <h1 class="vertical-center">+ Other</h1>
+      </a>
+   </div>
+</div>
+</div>

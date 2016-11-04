@@ -16,3 +16,33 @@ angular.module('planner').controller('PlannerController', ['$scope', 'events', '
         };*/
   }
 ])
+
+function populateEvents($scope,$http) {
+    var url = "/planner/client/event-data.json";
+ 
+    $http.get(url).success( function(response) {
+       $scope.events = response;
+    });
+}
+
+/*global angular */
+// (function (ng) {
+//   'use strict';
+
+//   var app = ng.module('ngLoadScript', []);
+
+//   app.directive('script', function() {
+//     return {
+//       restrict: 'E',
+//       scope: false,
+//       link: function(scope, elem, attr) {
+//         if (attr.type === 'text/javascript-lazy') {
+//           var code = elem.text();
+//           var f = new Function(code);
+//           f();
+//         }
+//       }
+//     };
+//   });
+
+// }(angular));

@@ -16,7 +16,7 @@
 
 .vertical-center{
     position: relative;
-    top: 50%;
+    top: 40%;
     transform: translateY(-50%);
 }
 
@@ -41,6 +41,40 @@ div.activity-panel:hover{
 
 .activity-tile-text{
     vertical-align: middle;
+
+}
+
+.shift-right-down{
+    vertical-align: middle;
+    position: relative; 
+    top: 20px;
+    left: 275px;
+}
+
+.shift-event-right{
+    vertical-align: middle;
+    position: relative; 
+    top: 20px;
+    left: 425px;
+}
+
+.shift-left{
+    position: relative;
+    right: 100px;
+
+}
+
+.shift-right{
+    position: relative;
+    left: 100px;
+
+}
+
+#events-tile{
+    background-image: url("../img/events_background.jpg");
+    background-position: right bottom;
+    background-size: cover;
+    color: white;
 }
 
 #flights-tile{
@@ -48,6 +82,7 @@ div.activity-panel:hover{
     background-position: right bottom;
     background-size: cover;
     color: white;
+
 }
 
 #hotels-tile{

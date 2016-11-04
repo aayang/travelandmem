@@ -5,21 +5,21 @@ angular.module('articles').run(['Menus',
   function (Menus) {
     // Add the articles dropdown item
     Menus.addMenuItem('topbar', {
-      title: 'Articles',
-      state: 'articles',
-      type: 'dropdown'
+      title: 'My Plans',
+      state: 'articles.list',
+      
     });
 
-    // Add the dropdown list item
-    Menus.addSubMenuItem('topbar', 'articles', {
-      title: 'List Articles',
-      state: 'articles.list'
-    });
+    // // Add the dropdown list item
+    // Menus.addSubMenuItem('topbar', 'articles', {
+    //   title: 'All My Plans',
+    //   state: 'articles.list'
+    // });
 
-    // Add the dropdown create item
-    Menus.addSubMenuItem('topbar', 'articles', {
-      title: 'Create Articles',
-      state: 'articles.create'
-    });
+    // // Add the dropdown create item
+    // Menus.addSubMenuItem('topbar', 'articles', {
+    //   title: 'Create Plan',
+    //   state: 'articles.create'
+    // });
   }
 ]);
