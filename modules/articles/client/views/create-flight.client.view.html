@@ -23,19 +23,20 @@
       </div>
 
       <div class="col-md-12 flight-description-panel" collapse="isCollapsed">
-        <form action='#'>
+        <form name="articleForm" class="form-horizontal" data-ng-submit="create()" novalidate>
+          <fieldset>
           <h1>Description</h1><h6>Please fill out all boxes</h6>
 
           <div class='row'>
 
-            <div class="col-lg-6">
+            <div class="col-lg-6 form-group">
               Departure: <br />
-              <input type='text' name='title' placeholder='Location'><br /> <!-- name='departure' -->
+              <input type='text' name='title' data-ng-model="title" placeholder='Location'><br /> <!-- name='departure' -->
               One Way/ Round Trip: <br />
               <input type='radio' name='flight-type' value="One way"> One way
               <input type='radio' name='flight-type' value="Round trip"> Round trip <br /><br />
               Additional Notes: (max character count: 250)<br />
-              <textarea id='flight-notes' type='text' name='content' placeholder='Enter Additional Notes Here' maxlength="250"></textarea>                  <!-- name='additional-notes' -->
+              <textarea id='flight-notes' type='text' name='content' data-ng-model="content" placeholder='Enter Additional Notes Here' maxlength="250"></textarea>                  <!-- name='additional-notes' -->
               <input type="submit" value="Save" data-ng-submit="create()">
             </div>
 
@@ -45,6 +46,7 @@
 
             </div>
           </div>
+          </fieldset>
         </form>
       </div>
 
