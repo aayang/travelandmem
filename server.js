@@ -3,8 +3,8 @@
 /**
  * Module dependencies.
  */
-var app = require('./config/lib/app');
-var server = app.start();
+// var app = require('./config/lib/app');
+// var server = app.start();
 
 var express = require('express');
 var bodyparser = require('body-parser');
