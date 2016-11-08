@@ -12,7 +12,7 @@ var mongoose = require('mongoose');
 var http = require('http');
 var app = express();
  
-mongoose.connect(process.env.MONGOLAB_URI || 'mongodb://127.0.0.1/local');
+mongoose.connect(process.env.MONGOLAB_URI || 'mongodb://127.0.0.1:27017/local');
 app.use(express.static(__dirname + '/build'));
  
 app.use(bodyparser.json({limit:'50mb'}));
