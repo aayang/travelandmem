@@ -5,15 +5,63 @@
       <div class="col-md-10 col-md-offset-1">
          <div class="jumbotron" id="planner-title">
             <h1 class="display-3">Your Travel Planner</h1>
+            <!---
             <p class="lead">March 20, 2016 to March 26, 2016</p>
             <p>Budget: $3,000</p>
+            --->
          </div>
 
+
          <div class="row" id="home-planner-schedule">
+
             <div class="col-md-12 text-center grey-border">
-               <h1>New Panel <span class="glyphicon glyphicon-pencil"></span> </h1>
+               <h1>Activities &nbsp&nbsp<span class="glyphicon glyphicon-pencil"></span> </h1>
             </div>
 
+            <div ng-repeat="plan in travelPlans" class="col-md-12 activity-panel grey-border" ng-click="isCollapsed = !isCollapsed;">
+               <h3>{{plan.title}} at <span class="text-color-grey">{{plan.date}}</span></h3>
+
+               <div collapse="isCollapsed">
+                  <div ng-show="!plan.editing" class="well well-lg"><h4>{{plan.description}}</h4></div>
+
+                  <form name="travelPlanForm" class="form-horizontal" data-ng-submit="update(plan)" ng-click="$event.stopPropagation()" novalidate>
+
+                     <fieldset ng-show="plan.editing">
+                        <div class="form-group">
+                           <label class="control-label" for="title">Title</label>
+                           <div class="controls">
+                              <input name="title" type="text" data-ng-model="plan.title" id="plan-title" class="form-control" placeholder={{plan.title}} required>
+                           </div>
+                        </div>
+
+                        <div class="form-group">
+                           <label class="control-label" for="description">Description</label>
+                           <div class="controls">
+                              <textarea name="description" data-ng-model="plan.description" id="plan-description" class="form-control" cols="3" rows="6" placeholder={{plan.description}}></textarea>
+                           </div>
+                        </div>
+
+                        <div class="form-group">
+                           <input type="submit" value="Update" class="btn btn-default">
+                        </div>
+
+                        <div data-ng-show="error" class="text-danger">
+                           <strong data-ng-bind="error"></strong>
+                        </div>
+                     </fieldset>
+
+                  </form>
+
+                  <button ng-click="editPlan(plan); $event.stopPropagation()" type="button" class="btn btn-primary">Edit</button>
+                  <button ng-click="deletePlan(plan); $event.stopPropagation()"type="button" class="btn btn-danger">Delete</button>
+               </div>
+            </div>
+
+
+
+
+
+            <!---
             <div class="col-md-12 activity-panel grey-border" ng-click="isCollapsed = !isCollapsed">
                <h3>Running at <span class="text-color-grey"> 6am Mon, March 21</span></h3>
 
@@ -37,32 +85,37 @@
                </div>
             </div>
          </div>
+         --->
 
-    <!--      <div class="row marketing tile-container">
-            <div class="col-md-3">
-               <a ui-sref="planner.flights" class="activity-tile" id="flights-tile">
-                  <h1 class="vertical-center">Flights</h1>
-               </a>
-            </div>
+         <div class="page-header col-md-12">
+            <h1>Edit Article</h1>
+         </div>
+         <div class="col-md-12">
+            <form name="travelPlanForm" class="form-horizontal" data-ng-submit="create()" novalidate>
 
-            <div class="col-md-3">
-               <a ui-sref="planner.hotels" class="activity-tile" id="hotels-tile">
-                  <h1 class="vertical-center">Hotels</h1>
-               </a>
-            </div>
+               <fieldset>
+                  <div class="form-group">
+                     <label class="control-label" for="title">Title</label>
+                     <div class="controls">
+                        <input name="title" type="text" data-ng-model="travelPlan.title" id="title" class="form-control" placeholder="Title" required>
+                     </div>
+                  </div>
+                  <div class="form-group">
+                     <label class="control-label" for="description">Description</label>
+                     <div class="controls">
+                        <textarea name="content" data-ng-model="travelPlan.description" id="description" class="form-control" cols="30" rows="10" placeholder="Description"></textarea>
+                     </div>
+                  </div>
+                  <div class="form-group">
+                     <input type="submit" value="Update" class="btn btn-default">
+                  </div>
+                  <div data-ng-show="error" class="text-danger">
+                     <strong data-ng-bind="error"></strong>
+                  </div>
+               </fieldset>
 
-            <div class="col-md-3">
-               <a ui-sref="planner.rentals" class="activity-tile" id="rentals-tile">
-                  <h1 class="vertical-center">Rentals</h1>
-               </a>
-            </div>
-
-            <div class="col-md-3">
-               <a ui-sref="planner.other" class="activity-tile" id="other-tile">
-                  <h1 class="vertical-center">Other</h1>
-               </a>
-            </div>
-         </div> -->
+            </form>
+         </div>
 
       </div>
    </div>
