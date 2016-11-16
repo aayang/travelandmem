@@ -76,11 +76,11 @@ angular.module('planner').controller('PlannerController', ['TravelPlan', '$scope
             angular.forEach($scope.travelPlans, function (currentPlan) {
                 currentPlan.editing = currentPlan === plan && !currentPlan.editing;
             });
-        }
+        };
 
         $scope.formatDate = function(date){
             return 1;
-        }
+        };
 
   }
 ]);
