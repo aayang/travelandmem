@@ -318,6 +318,10 @@ angular.module('core').config(['$stateProvider', '$urlRouterProvider',
       .state('not-found', {
         url: '/not-found',
         templateUrl: 'modules/core/views/404.client.view.html'
+      })
+      .state('home2', {
+          url: '/home2',
+          templateUrl: 'modules/core/views/home2.client.view.html'
       });
   }
 ]);
