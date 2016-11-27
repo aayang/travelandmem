@@ -1,8 +1,8 @@
-<section data-ng-controller="ArticlesController">
+<section data-ng-controller="FlightsController">
   <div class="row flights-row">
 
     <div class='col-lg-6 jumbotron flights-jumbo'>
-      <h1 style="font-size: 120px; color:white;">Flights</h1>
+      <h1 style="font-  size: 120px; color:white;">Flights</h1>
       <h2 style="color:white">Budget: $amount</h2>
       <h3 style="color:white">Total Cost: $cost</h3>
     </div>
@@ -22,8 +22,8 @@
         <h3><span class="glyphicon glyphicon-plus"></span>  Add flight</h3>
       </div>
 
-      <div class="col-md-12 flight-description-panel" collapse="isCollapsed">
-        <form name="articleForm" class="form-horizontal" data-ng-submit="create()" novalidate>
+      <div class="col-md-12 flight-description-panel" collapse="!isCollapsed">
+        <form name="articleForm" class="form-horizontal" data-ng-submit="createFlight()" novalidate>
           <fieldset>
           <h1>Description</h1><h6>Please fill out all boxes</h6>
 
@@ -37,7 +37,7 @@
               <input type='radio' name='flight-type' value="Round trip"> Round trip <br /><br />
               Additional Notes: (max character count: 250)<br />
               <textarea id='flight-notes' type='text' name='content' data-ng-model="content" placeholder='Enter Additional Notes Here' maxlength="250"></textarea>                  <!-- name='additional-notes' -->
-              <input type="submit" value="Save" data-ng-submit="create()">
+              <input type="submit" value="Save" data-ng-submit="createFlight()">
             </div>
 
             <div class="col-lg-6">
@@ -52,6 +52,22 @@
 
       <div class="col-md-12 flight-description-panel">
         <h2> &nbsp&nbsp&nbspFlights:</h2>
+        <hr />
+        <div class="list-group">
+          <a data-ng-repeat="flight in flights" data-ui-sref="flights.view({flightId: flight._id})" class="list-group-item">
+            <small class="list-group-item-text">
+              Posted on
+              <span data-ng-bind="flight.created | date:'mediumDate'"></span>
+              by
+              <span data-ng-bind="flight.user.displayName"></span>
+            </small>
+            <h4 class="list-group-item-heading" data-ng-bind="flight.title"></h4>
+            <p class="list-group-item-text" data-ng-bind="flight.content"></p>
+          </a>
+        </div>
+        <div class="alert alert-warning text-center" data-ng-if="!flights.length">
+          No plans yet, why don't you create one?
+        </div>
       </div>
     </div>
 </section>
