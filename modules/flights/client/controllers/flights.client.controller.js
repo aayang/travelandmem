@@ -7,11 +7,10 @@ angular.module('flights').controller('FlightsController', ['$scope', '$statePara
 
     // Create new flight
     $scope.createFlight = function () {
-      console.log("client contrller");
       // Create new flight object
       var flight = new Flights({
-        title: this.title,
-        content: this.content
+        flightName: this.flightName,
+        arr: this.arrival
       });
 
       // Redirect after save
