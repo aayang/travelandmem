@@ -12,6 +12,7 @@ var path = require('path'),
  * Create a flight
  */
 exports.create = function (req, res) {
+  console.log("server")
   var flight = new Flight(req.body);
   flight.user = req.user;
 
