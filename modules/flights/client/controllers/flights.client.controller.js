@@ -9,8 +9,9 @@ angular.module('flights').controller('FlightsController', ['$scope', '$statePara
     $scope.createFlight = function () {
       // Create new flight object
       var flight = new Flights({
-        flightName: this.flightName,
-        arr: this.arrival
+        description: this.description,
+        arrival: this.arrival,
+        departure: this.departure,
       });
 
       // Redirect after save
@@ -18,8 +19,9 @@ angular.module('flights').controller('FlightsController', ['$scope', '$statePara
         $location.path('flights/' + response._id);
 
         // Clear form fields
-        $scope.title = '';
-        $scope.content = '';
+        $scope.description = '';
+        $scope.arrival = '';
+        $scope.departure = '';
       }, function (errorResponse) {
         $scope.error = errorResponse.data.message;
       });

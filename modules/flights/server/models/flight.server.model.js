@@ -14,16 +14,23 @@ var FlightSchema = new Schema({
     type: Date,
     default: Date.now
   },
-  title: {
+  departure: {
     type: String,
     default: '',
     trim: true,
-    required: 'Title cannot be blank'
+    required: 'Departure cannot be blank'
   },
-  content: {
+  arrival: {
     type: String,
     default: '',
-    trim: true
+    trim: true,
+    required: 'Arrival cannot be blank'
+  },
+  description: {
+    type: String,
+    default: '',
+    trim: true,
+    required: 'Description cannot be blank'
   },
   user: {
     type: Schema.ObjectId,

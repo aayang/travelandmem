@@ -12,7 +12,6 @@ var path = require('path'),
  * Create a flight
  */
 exports.create = function (req, res) {
-  console.log("server")
   var flight = new Flight(req.body);
   flight.user = req.user;
 
@@ -40,8 +39,9 @@ exports.read = function (req, res) {
 exports.update = function (req, res) {
   var flight = req.flight;
 
-  flight.title = req.body.title;
-  flight.content = req.body.content;
+  flight.departure = req.body.departure;
+  flight.arrival = req.body.arrival;
+  flight.description = req.body.description;
 
   flight.save(function (err) {
     if (err) {

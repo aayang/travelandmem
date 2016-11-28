@@ -2,7 +2,7 @@
   <div class="row flights-row">
 
     <div class='col-lg-6 jumbotron flights-jumbo'>
-      <h1 style="font-  size: 120px; color:white;">Flights</h1>
+      <h1 style="font-size: 120px; color:white;">Flights</h1>
       <h2 style="color:white">Budget: $amount</h2>
       <h3 style="color:white">Total Cost: $cost</h3>
     </div>
@@ -31,18 +31,18 @@
 
             <div class="col-lg-6 form-group">
               Departure: <br />
-              <input type='text' name='title' data-ng-model="title" placeholder='Location'><br /> <!-- name='departure' -->
+              <input type='text' name='departure' data-ng-model="departure" placeholder='Location'><br /> <!-- name='departure' -->
               One Way/ Round Trip: <br />
               <input type='radio' name='flight-type' value="One way"> One way
               <input type='radio' name='flight-type' value="Round trip"> Round trip <br /><br />
               Additional Notes: (max character count: 250)<br />
-              <textarea id='flight-notes' type='text' name='content' data-ng-model="content" placeholder='Enter Additional Notes Here' maxlength="250"></textarea>                  <!-- name='additional-notes' -->
+              <textarea id='flight-notes' type='text' name='description' data-ng-model="description" placeholder='Enter Additional Notes Here' maxlength="250"></textarea>                  <!-- name='additional-notes' -->
               <input type="submit" value="Save" data-ng-submit="createFlight()">
             </div>
 
             <div class="col-lg-6">
               Arrival: <br />
-              <input type='text' name='arrival' placeholder='Location'>
+              <input type='text' name='arrival' data-ng-model="arrival" placeholder='Location'>
 
             </div>
           </div>
@@ -61,8 +61,10 @@
               by
               <span data-ng-bind="flight.user.displayName"></span>
             </small>
-            <h4 class="list-group-item-heading" data-ng-bind="flight.title"></h4>
-            <p class="list-group-item-text" data-ng-bind="flight.content"></p>
+            <p>Arrival: <span class="list-group-item-heading" data-ng-bind="flight.arrival"></span></p>
+            <p>Departure: <span class="list-group-item-heading" data-ng-bind="flight.departure"></span></p>
+            <p>Description: </p>
+            <p class="list-group-item-text" data-ng-bind="flight.description"></p>
           </a>
         </div>
         <div class="alert alert-warning text-center" data-ng-if="!flights.length">
