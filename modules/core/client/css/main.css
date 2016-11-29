@@ -1,10 +1,4 @@
-@import url(font-awesome.min.css);
 
-/*
-	Spectral by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
 
 /* Basic */
 
@@ -1546,3 +1540,12 @@
 	body.is-mobile.landing #footer {
 		background-color: #1d242a;
 	}
+
+
+	/* alternative homepage*/
+
+	#title-header {
+		float: left;
+		margin-left: 100px;
+	}
+

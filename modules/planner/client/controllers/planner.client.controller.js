@@ -37,10 +37,10 @@ angular.module('planner').controller('PlannerController', ['TravelPlan', '$scope
                 $scope.content = '';
                 $scope.travelPlans = TravelPlan.query();
 
-                console.log("successful");
+                console.log('successful');
             }, function (errorResponse) {
                 $scope.error = errorResponse.data.message;
-                console.log("unsuccessful");
+                console.log('unsuccessful');
             });
         };
 
@@ -76,41 +76,19 @@ angular.module('planner').controller('PlannerController', ['TravelPlan', '$scope
             angular.forEach($scope.travelPlans, function (currentPlan) {
                 currentPlan.editing = currentPlan === plan && !currentPlan.editing;
             });
-        }
+        };
 
         $scope.formatDate = function(date){
             return 1;
-        }
+        };
 
   }
 ]);
 
 function populateEvents($scope,$http) {
-    var url = "/planner/client/event-data.json";
- 
+    var url = '/planner/client/event-data.json';
+
     $http.get(url).success( function(response) {
        $scope.events = response;
     });
 }
-
-/*global angular */
-// (function (ng) {
-//   'use strict';
-
-//   var app = ng.module('ngLoadScript', []);
-
-//   app.directive('script', function() {
-//     return {
-//       restrict: 'E',
-//       scope: false,
-//       link: function(scope, elem, attr) {
-//         if (attr.type === 'text/javascript-lazy') {
-//           var code = elem.text();
-//           var f = new Function(code);
-//           f();
-//         }
-//       }
-//     };
-//   });
-
-// }(angular));
