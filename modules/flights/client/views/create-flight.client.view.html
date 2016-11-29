@@ -1,4 +1,4 @@
-<section data-ng-controller="ArticlesController">
+<section data-ng-controller="FlightsController" data-ng-init="find()">
   <div class="row flights-row">
 
     <div class='col-lg-6 jumbotron flights-jumbo'>
@@ -22,8 +22,8 @@
         <h3><span class="glyphicon glyphicon-plus"></span>  Add flight</h3>
       </div>
 
-      <div class="col-md-12 flight-description-panel" collapse="isCollapsed">
-        <form name="articleForm" class="form-horizontal" data-ng-submit="create()" novalidate>
+      <div class="col-md-12 flight-description-panel" collapse="!isCollapsed">
+        <form name="articleForm" class="form-horizontal" data-ng-submit="createFlight()" novalidate>
           <fieldset>
           <h1>Description</h1><h6>Please fill out all boxes</h6>
 
@@ -31,18 +31,18 @@
 
             <div class="col-lg-6 form-group">
               Departure: <br />
-              <input type='text' name='title' data-ng-model="title" placeholder='Location'><br /> <!-- name='departure' -->
+              <input type='text' name='departure' data-ng-model="departure" placeholder='Location'><br /> <!-- name='departure' -->
               One Way/ Round Trip: <br />
               <input type='radio' name='flight-type' value="One way"> One way
               <input type='radio' name='flight-type' value="Round trip"> Round trip <br /><br />
               Additional Notes: (max character count: 250)<br />
-              <textarea id='flight-notes' type='text' name='content' data-ng-model="content" placeholder='Enter Additional Notes Here' maxlength="250"></textarea>                  <!-- name='additional-notes' -->
-              <input type="submit" value="Save" data-ng-submit="create()">
+              <textarea id='flight-notes' type='text' name='description' data-ng-model="description" placeholder='Enter Additional Notes Here' maxlength="250"></textarea>                  <!-- name='additional-notes' -->
+              <input type="submit" value="Save" data-ng-submit="createFlight()">
             </div>
 
             <div class="col-lg-6">
               Arrival: <br />
-              <input type='text' name='arrival' placeholder='Location'>
+              <input type='text' name='arrival' data-ng-model="arrival" placeholder='Location'>
 
             </div>
           </div>
@@ -52,6 +52,24 @@
 
       <div class="col-md-12 flight-description-panel">
         <h2> &nbsp&nbsp&nbspFlights:</h2>
+        <hr />
+        <div class="list-group">
+          <a data-ng-repeat="flight in flights" data-ui-sref="flights.view({flightId: flight._id})" class="list-group-item">
+            <small class="list-group-item-text">
+              Posted on
+              <span data-ng-bind="flight.created | date:'mediumDate'"></span>
+              by
+              <span data-ng-bind="flight.user.displayName"></span>
+            </small>
+            <p>Arrival: <span class="list-group-item-heading" data-ng-bind="flight.arrival"></span></p>
+            <p>Departure: <span class="list-group-item-heading" data-ng-bind="flight.departure"></span></p>
+            <p>Description: </p>
+            <p class="list-group-item-text" data-ng-bind="flight.description"></p>
+          </a>
+        </div>
+        <div class="alert alert-warning text-center" data-ng-if="!flights.length">
+          No plans yet, why don't you create one?
+        </div>
       </div>
     </div>
 </section>

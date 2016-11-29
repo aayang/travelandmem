@@ -200,6 +200,16 @@ module.exports = function (grunt) {
         filter: function () {
           return !fs.existsSync('config/env/local.js');
         }
+      },
+      images: {
+        files: [
+          {
+            expand: true,
+            flatten: true,
+            src: ['modules/**/*.{png,jpg,svg}'],
+            dest:'public/img/'
+          }
+        ]
       }
     }
   });
@@ -249,7 +259,7 @@ module.exports = function (grunt) {
   grunt.registerTask('lint', ['sass', 'less', 'jshint', 'csslint']);
 
   // Lint project files and minify them into two production files.
-  grunt.registerTask('build', ['env:dev', 'lint', 'ngAnnotate', 'uglify', 'cssmin']);
+  grunt.registerTask('build', ['env:dev', 'lint', 'ngAnnotate', 'uglify', 'copy:images', 'cssmin']);
 
   // Run the project tests
   grunt.registerTask('test', ['env:test', 'lint', 'mkdir:upload', 'copy:localConfig', 'server', 'mochaTest', 'karma:unit']);
