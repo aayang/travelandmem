@@ -19,7 +19,7 @@
             </div>
 
             <div ng-repeat="plan in travelPlans" class="col-md-12 activity-panel grey-border" ng-click="isCollapsed = !isCollapsed;">
-               <h3>{{plan.title}} at <span class="text-color-grey">{{plan.date}}</span></h3>
+               <h3>{{plan.title}} at <span class="text-color-grey">{{formatDate(plan.date)}}</span></h3>
 
                <div collapse="isCollapsed">
                   <div ng-show="!plan.editing" class="well well-lg"><h4>{{plan.description}}</h4></div>

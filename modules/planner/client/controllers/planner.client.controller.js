@@ -18,7 +18,6 @@ angular.module('planner').controller('PlannerController', ['TravelPlan', '$scope
         };*/
 
         $scope.travelPlans = TravelPlan.query();
-        console.log(TravelPlan.query());
 
         // Create new Article
         $scope.create = function () {
@@ -42,6 +41,24 @@ angular.module('planner').controller('PlannerController', ['TravelPlan', '$scope
                 $scope.error = errorResponse.data.message;
                 console.log("unsuccessful");
             });
+        };
+
+        $scope.formatDate = function(plan_date) {
+            var monthNames = [
+                "January", "February", "March",
+                "April", "May", "June", "July",
+                "August", "September", "October",
+                "November", "December"
+            ];
+
+            var date = new Date(plan_date);
+            var day = date.getDate();
+            var monthIndex = date.getMonth();
+            var year = date.getFullYear();
+
+            var ret = day + ' ' + monthNames[monthIndex] + ' ' + year;
+            console.log(ret);
+            return day + ' ' + monthNames[monthIndex] + ' ' + year;
         };
 
         // Update existing Article
@@ -78,9 +95,6 @@ angular.module('planner').controller('PlannerController', ['TravelPlan', '$scope
             });
         };
 
-        $scope.formatDate = function(date){
-            return 1;
-        };
 
  
   // (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
