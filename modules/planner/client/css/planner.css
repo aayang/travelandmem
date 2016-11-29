@@ -35,25 +35,28 @@
 
 div.activity-panel:hover{
     background-color: #ededff;
-
 }
-
-
+.no-margin{
+  margin: 0px !important;
+}
+.no-padding{
+  padding: 0px !important;
+}
 .activity-tile-text{
-    vertical-align: middle;
-
+    text-align: center;
+    background-color: #f1f1f1;
 }
 
 .shift-right-down{
     vertical-align: middle;
-    position: relative; 
+    position: relative;
     top: 20px;
     left: 275px;
 }
 
 .shift-event-right{
     vertical-align: middle;
-    position: relative; 
+    position: relative;
     top: 20px;
     left: 425px;
 }

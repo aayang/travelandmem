@@ -44,7 +44,7 @@ var TravelPlanSchema = new Schema({
     date: {
         type: Date,
         default: Date.now,
-        required: "Please specify date"
+        required: 'Please specify date'
     }
 });
 
